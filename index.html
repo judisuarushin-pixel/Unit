@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ULDMS | Unit Leasing Database Management System</title>
+    <meta
+      name="description"
+      content="Unit Leasing Database Management System prototype for R.A. Del Rosario Constructions at Commercial Capipisa 7 Tanza Market."
+    />
+    <meta property="og:title" content="ULDMS | Unit Leasing Database Management System" />
+    <meta
+      property="og:description"
+      content="Unit Leasing Database Management System prototype for R.A. Del Rosario Constructions at Commercial Capipisa 7 Tanza Market."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/assets/aistudio/84854bb2-e5e7-4ee9-b080-af8c8dae6c81_f4bf60d1.jfif" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="loginView">
+      <form class="login-card" id="loginForm">
+        <img
+          class="brand-mark"
+          src="/assets/aistudio/84854bb2-e5e7-4ee9-b080-af8c8dae6c81_f4bf60d1.jfif"
+          alt="R.A. Del Rosario Construction logo"
+        />
+        <p>
+          Unit Leasing Database Management System<br />
+          <b>R.A. Del Rosario Constructions</b><br />
+          Commercial Capipisa 7 Tanza Market
+        </p>
+        <div class="form-group">
+          <label for="loginUser">Username</label>
+          <input id="loginUser" placeholder="Enter username" autocomplete="username" required />
+        </div>
+        <div class="form-group login-pass-group">
+          <label for="loginPass">Password</label>
+          <input id="loginPass" type="password" placeholder="Enter password" autocomplete="current-password" required />
+        </div>
+        <button class="btn btn-primary login-submit-btn" type="submit">
+          Sign in
+        </button>
+      </form>
+    </div>
+
+    <div id="app" class="hidden">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-logo">
+            <img
+              src="/assets/aistudio/84854bb2-e5e7-4ee9-b080-af8c8dae6c81_f4bf60d1.jfif"
+              alt="R.A. Del Rosario Construction logo"
+            />
+          </div>
+          <strong>R.A. DEL ROSARIO<br />CONSTRUCTIONS</strong>
+          <div class="system">ULDMS</div>
+          <small>Unit Leasing Database<br />Management System</small>
+        </div>
+        <nav class="nav" id="nav">
+          <button type="button" class="active" data-page="dashboard">
+            <span class="ico">▦</span><span class="nav-label">Dashboard</span>
+          </button>
+          <button type="button" data-page="tenants">
+            <span class="ico">♙</span><span class="nav-label">Tenant Management</span>
+          </button>
+          <button type="button" data-page="units">
+            <span class="ico">⌂</span><span class="nav-label">Unit Management</span>
+          </button>
+          <button type="button" data-page="leases">
+            <span class="ico">▤</span><span class="nav-label">Lease Management</span>
+          </button>
+          <button type="button" data-page="billing">
+            <span class="ico">▣</span><span class="nav-label">Billing &amp; Payments</span>
+          </button>
+          <button type="button" data-page="reports">
+            <span class="ico">▥</span><span class="nav-label">Reports &amp; Search</span>
+          </button>
+          <button type="button" data-page="users">
+            <span class="ico">♧</span><span class="nav-label">User Accounts</span>
+          </button>
+        </nav>
+        <div class="nav-spacer"></div>
+        <nav class="nav">
+          <button type="button" id="logoutBtn" class="logout">
+            <span class="ico">⇥</span><span class="nav-label">Sign out</span>
+          </button>
+        </nav>
+        <div class="side-foot">Prototype • Sample data only</div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="top-title">
+            Commercial Capipisa 7 Tanza Market
+            <small>Property Management System</small>
+          </div>
+          <div class="top-right">
+            <span class="date-label" id="today"></span>
+            <div class="avatar" id="userAvatar">A</div>
+            <b id="userDisplay">Admin Staff</b>
+          </div>
+        </header>
+        <section class="content" id="view"></section>
+        <footer class="footer">
+          © 2025 R.A. Del Rosario Constructions · ULDMS Academic Demonstration Prototype · Sample records only
+        </footer>
+      </main>
+    </div>
+
+    <div id="modalRoot"></div>
+    <div id="toast" class="toast"></div>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
